@@ -3,7 +3,7 @@ FROM python:3.10-slim
 
 # 2. Install essential system tools
 RUN apt-get update && apt-get install -y \
-    git ffmpeg curl && \
+    git ffmpeg curl p7zip-full aria2 gunicorn && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app
